@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3aa39f;
+  --color-secondary: #445daa;
+  --color-tertiary: #2d3748;
+  --color-quaternary: #4a5568;
+  --color-quinary: #718096;
+  --color-senary: #a0aec0;
+  --color-septenary: #cbd5e0;
+  --color-octonary: #e2e8f0;
+  --color-nonary: #edf2f7;
+  --color-denary: #f7fafc;
+  --color-text-primary: #000;
+  --color-text-secondary: #fff;
+  --color-background: #fff;
+  --color-cerulean-blue-100: #d9edff;
+  --color-create-100: #5bad80;
+  --color-create-200: #50cb93;
+}
+
+#root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Đối với WebKit (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px; /* Độ rộng thanh cuộn */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #d9d9d9; /* Màu nền */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #999; /* Màu thanh trượt */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #666; /* Màu khi hover */
+}
+
+/* CSS để thay đổi màu sắc của slider */
+/* input[type="range"].slider::-webkit-slider-thumb {
+  background-color: #ff1e1e;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type="range"].slider::-webkit-slider-runnable-track {
+  background-color: #e5e7eb;
+  height: 8px;
+  border-radius: 5px;
+}
+
+input[type="range"].slider::-moz-range-thumb {
+  background-color: #ff1e1e;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input[type="range"].slider::-moz-range-track {
+  background-color: #e5e7eb;
+  height: 8px;
+  border-radius: 5px;
+} */
