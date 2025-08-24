@@ -16,7 +16,7 @@ import axios from "axios";
 const Home = () => {
   const dispatch = useDispatch();
   const { products, loading, error } = useSelector((state) => state.products);
-  // const [bestSellerProduct, setbestSellerProduct] = useState(null);
+  const [bestSellerProduct, setbestSellerProduct] = useState(null);
 
   useEffect(() => {
     // Fetch product for a specific collection
@@ -26,10 +26,10 @@ const Home = () => {
         limit: 8,
       })
     );
-    // dispatch(fetchBestSeller());
+    dispatch(fetchBestSeller());
 
     // Fetch best seller product
-    // const fetchBestSeller = async () => {
+    // const fetchBestSellers = async () => {
     //   try {
     //     const response = await axios.get(
     //       `${import.meta.env.VITE_BACKEND_URL}/api/products/best-seller`
@@ -46,20 +46,20 @@ const Home = () => {
       <Hero title={"Iphone 16 Series"} />
       <CollectionSection />
       <ProductCategories />
-      {/* <h2 className="text-3xl text-center font-bold mb-4">Best Seller</h2>
+      <h2 className="text-3xl text-center font-bold mb-4">Best Seller</h2>
       {bestSellerProduct ? (
         <ProductDetails productId={bestSellerProduct._id} />
       ) : (
         <p className="text-center">Loading best seller product ...</p>
-      )} */}
+      )}
 
       <div className="container mx-auto">
         <h2 className="text-3xl text-center font-bold mb-4">Top</h2>
         <ProductGird products={products} loading={loading} error={error} />
       </div>
 
-      {/* <FeaturedCollection />
-      <FeaturesSection /> */}
+      <FeaturedCollection />
+      <FeaturesSection />
     </div>
   );
 };
